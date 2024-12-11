@@ -15,12 +15,9 @@
             app:destination="@id/segundoFragment" />
         <action
             android:id="@+id/action_primerFragment_to_tercerFragment"
-            app:destination="@id/tercerFragment" />
-        <argument
-            android:name="nombre"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue="Nombre" />
+            app:destination="@id/tercerFragment"
+            app:popUpTo="@id/primerFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/segundoFragment"
@@ -36,7 +33,12 @@
         android:id="@+id/tercerFragment"
         android:name="com.example.ejemplonavegacion.TercerFragment"
         android:label="fragment_tercer"
-        tools:layout="@layout/fragment_tercer" />
+        tools:layout="@layout/fragment_tercer" >
+        <argument
+            android:name="nombre"
+            app:argType="string"
+            android:defaultValue="Android" />
+    </fragment>
     <fragment
         android:id="@+id/cuartoFragment"
         android:name="com.example.ejemplonavegacion.CuartoFragment"

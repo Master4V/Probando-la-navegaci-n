@@ -21,12 +21,12 @@ class PrimerFragment : Fragment() {
         btn1.setOnClickListener{
             findNavController().navigate(R.id.action_primerFragment_to_segundoFragment)
         }
-        btn2.setOnClickListener{
+      /*  btn2.setOnClickListener{
             findNavController().navigate(R.id.action_primerFragment_to_tercerFragment)
-        }
-       /* btn2.setOnClickListener{
-            findNavController().navigate(PrimerFragmentDirections.actionPrimerFragmentToTercerFragment())
         }*/
+        btn2.setOnClickListener{
+            findNavController().navigate(PrimerFragmentDirections.actionPrimerFragmentToTercerFragment(nombre = "Victor"))
+        }
 
         return root
     }
